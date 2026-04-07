@@ -10,9 +10,19 @@ import ExcessSelector from './components/ExcessSelector.vue'
 import CategoryPicker from './components/CategoryPicker.vue'
 import FinalCTA from './components/FinalCTA.vue'
 import MarketingOptOut from './components/MarketingOptOut.vue'
+import ReviewPage from './components/ReviewPage.vue'
+import PaymentPage from './components/PaymentPage.vue'
 import { SAMPLE_ITEMS, PRICING } from './data/constants.js'
 
 const { baseMonthly, baseAnnual } = PRICING
+
+/* ── Page routing ── */
+const page = ref('cover')
+
+function handleNavigate(target) {
+  page.value = target
+  window.scrollTo({ top: 0, behavior: 'instant' })
+}
 
 const items = ref([...SAMPLE_ITEMS])
 const expandedId = ref(null)
@@ -86,7 +96,10 @@ function handleCategorySelect(cat) {
 }
 
 function handleContinue() {
-  if (allComplete.value) return
+  if (allComplete.value) {
+    handleNavigate('review')
+    return
+  }
   validationFired.value = true
   shakeBtn.value = true
   setTimeout(() => { shakeBtn.value = false }, 450)
@@ -113,7 +126,36 @@ setTimeout(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-off-white">
+  <!-- Review Page -->
+  <ReviewPage
+    v-if="page === 'review'"
+    :items="items"
+    :excess="excess"
+    :contents-limit="contentsLimit"
+    :add-ons-total="addOnsTotal"
+    :is-annual="isAnnual"
+    @navigate="handleNavigate"
+    @update:items="v => items = v"
+    @update:excess="v => excess = v"
+    @update:contents-limit="v => contentsLimit = v"
+    @update:add-ons-total="v => addOnsTotal = v"
+    @update:is-annual="v => isAnnual = v"
+  />
+
+  <!-- Payment Page -->
+  <PaymentPage
+    v-else-if="page === 'payment'"
+    :items="items"
+    :excess="excess"
+    :contents-limit="contentsLimit"
+    :add-ons-total="addOnsTotal"
+    :is-annual="isAnnual"
+    @navigate="handleNavigate"
+    @update:is-annual="v => isAnnual = v"
+  />
+
+  <!-- Cover Page (default) -->
+  <div v-else class="min-h-screen bg-off-white">
     <HeroSection />
 
     <div class="bg-off-white py-8 pb-12">
