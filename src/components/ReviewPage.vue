@@ -125,9 +125,9 @@ const propertyDeclarations = [
 ]
 
 const notCoveredItems = [
-  "Maintenance and upkeep of your home isn\u2019t covered. This includes damage caused by gradual deterioration, wear and tear, rust, or mould.",
-  "If you have a storm or flood, we won\u2019t cover any damage caused to fences, gates, or garden furniture.",
-  "Building works aren\u2019t covered. This means any structural alterations, extensions, or renovations you carry out.",
+  "Maintenance and upkeep of your home isn't covered. This includes damage caused by gradual deterioration, wear and tear, rust, or mould.",
+  "If you have a storm or flood, we won't cover any damage caused to fences, gates, or garden furniture.",
+  "Building works aren't covered. This means any structural alterations, extensions, or renovations you carry out.",
 ]
 
 const aboutPropertyDeclarations = [

@@ -24,7 +24,7 @@ export const CATS = {
       { icon: "\u26A1", title: "Accidental Damage", desc: "Items worn daily take knocks. Repairs and replacements covered." },
       { icon: "\uD83D\uDD12", title: "Theft", desc: "If the worst happens, you're fully covered for stolen jewellery." },
       { icon: "\uD83D\uDC8E", title: "Loss of Stone", desc: "Precious stones come loose. We'll cover the replacement." },
-      { icon: "\uD83C\uDF0D", title: "Worldwide Cover", desc: "Travel with peace of mind \u2014 protected wherever you go." },
+      { icon: "\uD83C\uDF0D", title: "Worldwide Cover", desc: "Travel with peace of mind — protected wherever you go." },
     ],
     questions: [
       { id: "purchased_30", label: "Was this item purchased in the last 30 days?", type: "yesno", followUp: { id: "previously_insured", label: "Was it previously insured?", type: "yesno", showWhen: "No" } },
@@ -42,7 +42,7 @@ export const CATS = {
       { icon: "\u2753", title: "Accidental Loss", desc: "Covered if you accidentally lose your watch." },
       { icon: "\uD83D\uDD12", title: "Theft", desc: "Watches are a target. You're fully covered if yours is stolen." },
       { icon: "\u26A1", title: "Accidental Damage", desc: "Knocks and scratches happen. We'll repair or replace." },
-      { icon: "\uD83C\uDF0D", title: "Worldwide Cover", desc: "Travel with peace of mind \u2014 protected wherever you go." },
+      { icon: "\uD83C\uDF0D", title: "Worldwide Cover", desc: "Travel with peace of mind — protected wherever you go." },
     ],
     questions: [
       { id: "purchased_30", label: "Was this item purchased in the last 30 days?", type: "yesno", followUp: { id: "previously_insured", label: "Was it previously insured?", type: "yesno", showWhen: "No" } },
@@ -63,7 +63,7 @@ export const CATS = {
     label: "Cameras & Telescopes",
     image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80",
     usps: [
-      { icon: "\u2753", title: "Accidental Loss", desc: "Covered if you lose your camera \u2014 not just theft." },
+      { icon: "\u2753", title: "Accidental Loss", desc: "Covered if you lose your camera — not just theft." },
       { icon: "\u26A1", title: "Accidental Damage", desc: "Equipment takes a beating in the field. Repairs or replacement covered." },
       { icon: "\uD83D\uDD12", title: "Theft", desc: "Camera gear is a target. You're covered if you're a victim of crime." },
       { icon: "\uD83D\uDE97", title: "Unattended Vehicle", desc: "Gear stolen from a locked boot? You're covered." },
@@ -79,7 +79,7 @@ export const CATS = {
     label: "Bicycles & E-Bikes",
     image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=400&q=80",
     usps: [
-      { icon: "\u26A1", title: "Accidental / Malicious Damage", desc: "Crash or vandalism \u2014 you're covered either way." },
+      { icon: "\u26A1", title: "Accidental / Malicious Damage", desc: "Crash or vandalism — you're covered either way." },
       { icon: "\uD83D\uDEB2", title: "Replacement Cycle Hire", desc: "We'll keep you on the road while yours is repaired or replaced." },
       { icon: "\u2696\uFE0F", title: "Legal Expenses", desc: "Automatic \u00A3100,000 legal expenses insurance included." },
       { icon: "\uD83D\uDD12", title: "Theft", desc: "Bikes are stolen every day. You're fully covered." },
@@ -219,9 +219,9 @@ export const POLICY_HOLDER = {
 }
 
 export const CONTENTS_LIMITS = [
-  { value: 50000, label: '\u00A350,000' },
-  { value: 75000, label: '\u00A375,000' },
-  { value: 100000, label: '\u00A3100,000' },
+  { value: 50000, label: '£50,000' },
+  { value: 75000, label: '£75,000' },
+  { value: 100000, label: '£100,000' },
 ]
 
 export const SINGLE_ITEM_LIMIT = 1000

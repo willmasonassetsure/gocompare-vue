@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { PRICING, POLICY_HOLDER } from '../data/constants.js'
+import { HERO_IMG_URI } from '../data/heroImage.js'
 
 /* ── Reactive state ── */
 const priceVisible = ref(false)
@@ -38,12 +39,12 @@ const usps = [
   },
   {
     title: 'Zero excess, zero fees',
-    desc: '\u00A30 compulsory excess on all specified items. Need to make changes? Amendments and cancellations are completely free.',
+    desc: '£0 compulsory excess on all specified items. Need to make changes? Amendments and cancellations are completely free.',
     icon: 'zero',
   },
   {
     title: '30-day money-back guarantee',
-    desc: "Changed your mind? Full refund within 30 days \u2014 double the industry standard. No deductions, no questions.",
+    desc: "Changed your mind? Full refund within 30 days — double the industry standard. No deductions, no questions.",
     icon: 'moneyback',
   },
 ]
@@ -216,14 +217,7 @@ onMounted(() => {
                style="inset: -40px; background: radial-gradient(circle at center, rgba(230,153,0,0.6) 0%, transparent 65%); filter: blur(40px)" />
           <div class="rounded-full bg-white relative z-[1] flex items-center justify-center overflow-hidden w-[350px] h-[350px]"
                style="box-shadow: 0 8px 40px rgba(0,0,0,0.08)">
-            <!-- Illustration placeholder -->
-            <div class="flex flex-col items-center justify-center text-text-muted">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-              <span class="font-body mt-2 text-[11px]">Home contents</span>
-            </div>
+            <img :src="HERO_IMG_URI" alt="Home contents insurance" style="width: 82%; height: 82%; object-fit: contain" />
           </div>
         </div>
 
