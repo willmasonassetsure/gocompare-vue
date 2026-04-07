@@ -239,7 +239,7 @@ onMounted(() => {
       <!-- Heading -->
       <h2 class="font-heading text-white text-center text-[26px] font-semibold m-0 mb-5 italic"
           style="animation: fadeUp 0.6s ease 0.6s both">
-        Great cover you can trust
+        Full-terms cover you can trust
       </h2>
 
       <!-- Trustpilot Widget -->
