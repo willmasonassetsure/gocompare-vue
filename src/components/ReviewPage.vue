@@ -8,6 +8,7 @@ import InfoBox from './InfoBox.vue'
 import ReviewField from './ReviewField.vue'
 import EditableField from './EditableField.vue'
 import DeclarationCheck from './DeclarationCheck.vue'
+import TrustpilotWidget from './TrustpilotWidget.vue'
 import { PRICING } from '../data/constants.js'
 
 const props = defineProps({
@@ -614,6 +615,9 @@ const securityDeclarations = [
           @update:is-annual="emit('update:isAnnual', $event)"
           @navigate="emit('navigate', $event)"
         />
+        <div class="mt-3 bg-white rounded-2xl border border-border-light py-4 px-5">
+          <TrustpilotWidget />
+        </div>
       </div>
 
     </div>
